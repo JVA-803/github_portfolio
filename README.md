@@ -51,10 +51,10 @@ In all of the places where you're supposed to fill your information you'll find 
     <div class="header__text">
         <h1 class="heading-primary">
         <!-- Replace the following name with your name -->
-        <span>Syed Ali Hussnain</span>
+        <span>VANG Jordan</span>
         </h1>
         <!-- Put a small paragraph about yourself -->
-        <p>A Web Developer based in Lahore, Pakistan.</p>
+        <p>TEST.</p>
         <a href="#contact" class="btn btn--pink">Get in touch</a>
     </div>
 </div>
@@ -82,7 +82,7 @@ Each div with class `work__box` represents a project, replace the contents of th
         <a href="#" class="link__text">
         Visit Site <span>&rarr;</span>
         </a> 
-        <a href="https://github.com/nisarhassan12/portfolio" target="_blank">
+        <a href="https://github.com/JVA-803/github_portfolio" target="_blank">
         <img src="./images/github.svg" class="work__code" alt="GitHub">
         </a>
     </div>
