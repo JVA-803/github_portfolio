@@ -54,7 +54,7 @@ In all of the places where you're supposed to fill your information you'll find 
         <span>VANG Jordan</span>
         </h1>
         <!-- Put a small paragraph about yourself -->
-        <p>TEST.</p>
+        <p>VANG Jordan | Actuellement étudiants en BTS Services informatiques aux organisations option : Système et réseau au lycée Chevollier à Angers..</p>
         <a href="#contact" class="btn btn--pink">Get in touch</a>
     </div>
 </div>
