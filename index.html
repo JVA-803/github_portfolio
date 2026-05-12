@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
+  <title>Portfolio VANG Jordan - BTS SIO SISR</title>
+  <meta name="description" content="Portfolio de Jordan VANG, étudiant en BTS SIO SISR.">
+  <meta name="keywords" content="Jordan VANG, BTS SIO, SISR, Réseaux, Administration Systèmes, Cybersécurité" />
+  <link rel="stylesheet" href="index.css" />
+  <style>
+    /* ── Veille technologique ── */
+    .veille {
+      padding: 6rem 0;
+    }
+
+    .veille h2 {
+      text-align: center;
+      font-size: 2.8rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .veille__intro {
+      text-align: center;
+      color: #aaa;
+      font-size: 1.5rem;
+      margin-bottom: 4rem;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .veille__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2.4rem;
+    }
+
+    .veille__card {
+      background: #1e1e1e;
+      border-radius: 10px;
+      border: 1px solid #2a2a2a;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.4);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .veille__card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    }
+
+    .veille__card-header {
+      padding: 1.8rem 2rem 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      border-bottom: 3px solid var(--card-color, #e74c3c);
+    }
+
+    .veille__card-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+      background: var(--card-color, #e74c3c);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .veille__card-icon svg {
+      width: 22px;
+      height: 22px;
+      fill: #fff;
+    }
+
+    .veille__card-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #f0f0f0;
+    }
+
+    .veille__card-tag {
+      font-size: 1.1rem;
+      color: var(--card-color, #e74c3c);
+      font-weight: 600;
+      margin-top: 0.1rem;
+    }
+
+    .veille__card-body {
+      padding: 1.4rem 2rem 1.8rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .veille__card-desc {
+      font-size: 1.35rem;
+      color: #bbb;
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    .veille__card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--card-color, #e74c3c);
+      text-decoration: none;
+      margin-top: auto;
+      transition: gap 0.2s;
+    }
+
+    .veille__card-link:hover {
+      gap: 0.9rem;
+      text-decoration: underline;
+    }
+
+    .veille__card-link::after {
+      content: "→";
+    }
+
+    /* Catégories */
+    .veille__section-label {
+      text-align: center;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #666;
+      margin-bottom: 2.4rem;
+      margin-top: -2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header" role="banner" id="top">
+    <div class="row">
+      <nav class="nav" role="navigation">
+        <ul class="nav__items">
+          <li class="nav__item"><a href="#work" class="nav__link">Projets</a></li>
+          <li class="nav__item"><a href="#clients" class="nav__link">Compétences</a></li>
+          <li class="nav__item"><a href="#veille" class="nav__link">Veille</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link">À propos</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__text-box row">
+      <div class="header__text">
+        <h1 class="heading-primary">
+          <span>VANG Jordan</span>
+        </h1>
+        <p>Étudiant en BTS Services Informatiques aux Organisations option SISR au lycée Chevrollier à Angers. Passionné par les réseaux, la cybersécurité et l'administration système.</p>
+        <a href="#contact" class="btn btn--pink">Me contacter</a>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+    <section class="work" id="work">
+      <div class="row">
+        <h2>Mes projets</h2>
+        <div class="work__boxes">
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Serveur NextCloud</h3>
+              <p>Mise en place d'un serveur NextCloud sur Debian pour la sauvegarde et le partage de fichiers en local ou à distance.</p>
+              <ul class="work__list">
+                <li>NextCloud</li>
+                <li>Debian</li>
+                <li>Apache</li>
+              </ul>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/nextcloud.png" class="work__image" alt="Serveur NextCloud" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Installation de MediaWiki</h3>
+              <p>Déploiement d'un wiki interne avec MediaWiki sur une machine Debian pour documenter les procédures internes.</p>
+              <ul class="work__list">
+                <li>MediaWiki</li>
+                <li>Debian</li>
+                <li>PHP/MySQL</li>
+              </ul>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/mediawiki.jpg" class="work__image" alt="MediaWiki" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Projet GregoireConstruction</h3>
+              <p>Création et gestion du parc informatique de l'entreprise fictive GregoireConstruction : configuration de serveurs, scripts de sauvegarde et maintenance.</p>
+              <ul class="work__list">
+                <li>Windows Server (DHCP, DNS, GPO)</li>
+                <li>Debian (MariaDB, Apache, GLPI)</li>
+                <li>OpenMediaVault (NAS)</li>
+                <li>Script Bash (sauvegarde automatique)</li>
+              </ul>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/project-gregoire.png" class="work__image" alt="Projet GregoireConstruction" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="client" id="clients">
+      <div class="row">
+        <h2>Compétences</h2>
+        <div class="client__text">
+          <p><strong>Linux :</strong> Expérience avec Debian, installation et gestion de serveurs, sécurisation et optimisation du système.</p>
+          <p><strong>Windows Server :</strong> Administration de serveurs Windows, configuration de services AD, DHCP, DNS et stratégies de groupe (GPO).</p>
+          <p><strong>Réseaux :</strong> Mise en place et gestion d'infrastructures réseau, configuration de serveurs et gestion des connexions.</p>
+          <p><strong>Virtualisation :</strong> Utilisation de VMware pour créer et gérer des environnements virtuels adaptés aux besoins spécifiques des projets.</p>
+          <p><strong>Cybersécurité :</strong> Sécurisation des systèmes et réseaux, configuration de serveurs web et bases de données avec les meilleures pratiques.</p>
+          <p><strong>Base de données :</strong> Gestion et administration de bases de données avec MariaDB, automatisation de l'importation de fichiers Excel vers une BDD SQL.</p>
+          <p><strong>Technologies apprises :</strong> Développement en C#, Python, HTML, CSS et SQL pour diverses applications et outils automatisés.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <h2>Stage</h2>
+        <div class="client__text">
+          <p><strong>Orange Cyberdefense</strong> 2025 : Stage d'observation d'une durée de 6 semaines chez Orange Cyberdefense à Massy 91300. Découverte du métier d'analyste SOC (N2, N3) dans le service de Solution De Confiance et montée en compétence sur des pare-feu NGFW (Fortinet et Palo Alto Networks).</p>
+          <p><strong>ACS Informatique</strong> 2026 : Stage BTS SIO SISR d'une durée de 6 semaines chez ACS Informatique à Angers (49). Découverte du métier de technicien systèmes et réseaux et montée en compétence sur le dépannage matériel/logiciel et l'assistance aux utilisateurs.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <h2>Pare-feu NGFW - Orange Cyberdefense</h2>
+        <div class="firewalls__container">
+          <div class="firewall__card">
+            <div class="firewall__image-box">
+              <img src="./images/fortinet_logo.png" class="firewall__image" alt="Fortinet" />
+            </div>
+            <h3>Fortinet</h3>
+            <p>Configuration et gestion de pare-feu Fortinet. Apprentissage des règles de sécurité et du filtrage réseau avancé.</p>
+          </div>
+          <div class="firewall__card">
+            <div class="firewall__image-box">
+              <img src="./images/Palo-alto.png" class="firewall__image" alt="Palo Alto Networks" />
+            </div>
+            <h3>Palo Alto Networks</h3>
+            <p>Aperçu des pare-feu Palo Alto Networks. Configuration des politiques de sécurité et analyse du trafic réseau.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SECTION VEILLE TECHNOLOGIQUE
+    ══════════════════════════════════════ -->
+    <section class="veille" id="veille">
+      <div class="row">
+        <h2>Veille technologique</h2>
+        <p class="veille__intro">
+          Rester à jour dans les domaines des réseaux, de la cybersécurité et des systèmes est essentiel en SISR.
+          Voici les sources que je consulte régulièrement.
+        </p>
+
+        <!-- Actualité & Info générale -->
+        <p class="veille__section-label">📰 Actualité informatique</p>
+        <div class="veille__grid">
+
+          <div class="veille__card" style="--card-color: #e74c3c;">
+            <div class="veille__card-header">
+              <div class="veille__card-icon">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V6h16v12zM6 10h12v2H6zm0 4h8v2H6z"/></svg>
+              </div>
+              <div>
+                <div class="veille__card-title">01net</div>
+                <div class="veille__card-tag">Actualité tech & numérique</div>
+              </div>
+            </div>
+            <div class="veille__card-body">
+              <p class="veille__card-desc">Portail français de référence couvrant l'actualité informatique, les tests de matériel, la sécurité et les tendances du numérique grand public et professionnel.</p>
+              <a href="https://www.01net.com" target="_blank" rel="noopener" class="veille__card-link">Visiter 01net</a>
+            </div>
+          </div>
+
+          <div class="veille__card" style="--card-color: #2980b9;">
+            <div class="veille__card-header">
+              <div class="veille__card-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+              </div>
+              <div>
+                <div class="veille__card-title">Le Monde Informatique</div>
+                <div class="veille__card-tag">Presse IT professionnelle</div>
+              </div>
+            </div>
+            <div class="veille__card-body">
+              <p class="veille__card-desc">Média B2B dédié aux professionnels de l'informatique : actualités entreprise, cloud, cybersécurité, infrastructure et transformation numérique.</p>
+              <a href="https://www.lemondeinformatique.fr" target="_blank" rel="noopener" class="veille__card-link">Visiter LMI</a>
+            </div>
+          </div>
+
+          <div class="veille__card" style="--card-color: #8e44ad;">
+            <div class="veille__card-header">
+              <div class="veille__card-icon">
+                <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+              </div>
+              <div>
+                <div class="veille__card-title">ZDNet France</div>
+                <div class="veille__card-tag">Tech & entreprise</div>
+              </div>
+            </div>
+            <div class="veille__card-body">
+              <p class="veille__card-desc">Actualités technologiques orientées entreprise : sécurité informatique, cloud, intelligence artificielle, infrastructure réseau et stratégie numérique.</p>
+              <a href="https://www.zdnet.fr" target="_blank" rel="noopener" class="veille__card-link">Visiter ZDNet</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Cybersécurité -->
+        <p class="veille__section-label" style="margin-top: 4rem;">🔒 Cybersécurité</p>
+        <div class="veille__grid">
+
+          <div class="veille__card" style="--card-color: #27ae60;">
+            <div class="veille__card-header">
+              <div class="veille__card-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+              </div>
+              <div>
+                <div class="veille__card-title">ANSSI</div>
+                <div class="veille__card-tag">Agence nationale de sécurité</div>
+              </div>
+            </div>
+            <div class="veille__card-body">
+              <p class="veille__card-desc">L'autorité française en matière de cybersécurité publie alertes, bulletins de sécurité, guides et bonnes pratiques pour les professionnels et les particuliers.</p>
+              <a href="https://www.cert.ssi.gouv.fr" target="_blank" rel="noopener" class="veille__card-link">Visiter CERT-FR</a>
+            </div>
+          </div>
+
+          <div class="veille__card" style="--card-color: #c0392b;">
+            <div class="veille__card-header">
+              <div class="veille__card-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+              </div>
+              <div>
+                <div class="veille__card-title">The Hacker News</div>
+                <div class="veille__card-tag">Actualité cybersécurité</div>
+              </div>
+            </div>
+            <div class="veille__card-body">
+              <p class="veille__card-desc">Référence mondiale pour les dernières actualités en cybersécurité : vulnérabilités, malwares, fuites de données, attaques et outils de sécurité.</p>
+              <a href="https://thehackernews.com" target="_blank" rel="noopener" class="veille__card-link">Visiter THN</a>
+            </div>
+          </div>
+
+          <div class="veille__card" style="--card-color: #d35400;">
+            <div class="veille__card-header">
+              <div class="veille__card-icon">
+                <svg viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+              </div>
+              <div>
+                <div class="veille__card-title">CVE Details</div>
+                <div class="veille__card-tag">Base de vulnérabilités</div>
+              </div>
+            </div>
+            <div class="veille__card-body">
+              <p class="veille__card-desc">Base de données complète des vulnérabilités CVE avec scores CVSS, statistiques et détails techniques. Indispensable pour suivre les failles de sécurité.</p>
+              <a href="https://www.cvedetails.com" target="_blank" rel="noopener" class="veille__card-link">Visiter CVE Details</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Réseaux & Systèmes -->
+        <p class="veille__section-label" style="margin-top: 4rem;">🌐 Réseaux & Systèmes</p>
+        <div class="veille__grid">
+
+          <div class="veille__card" style="--card-color: #16a085;">
+            <div class="veille__card-header">
+              <div class="veille__card-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 3C6.95 3 3 6.95 3 12s3.95 9 9 9 9-3.95 9-9-3.95-9-9-9zm0 16c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zm-1-11h2v6h-2zm0 8h2v2h-2z"/></svg>
+              </div>
+              <div>
+                <div class="veille__card-title">IT-Connect</div>
+                <div class="veille__card-tag">Tutoriels & réseaux</div>
+              </div>
+            </div>
+            <div class="veille__card-body">
+              <p class="veille__card-desc">Site francophone spécialisé dans les tutoriels réseau, système et sécurité : Windows Server, Linux, Active Directory, pare-feu, PowerShell et bien plus.</p>
+              <a href="https://www.it-connect.fr" target="_blank" rel="noopener" class="veille__card-link">Visiter IT-Connect</a>
+            </div>
+          </div>
+
+          <div class="veille__card" style="--card-color: #2471a3;">
+            <div class="veille__card-header">
+              <div class="veille__card-icon">
+                <svg viewBox="0 0 24 24"><path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/></svg>
+              </div>
+              <div>
+                <div class="veille__card-title">Cisco Blogs</div>
+                <div class="veille__card-tag">Réseaux & infrastructure</div>
+              </div>
+            </div>
+            <div class="veille__card-body">
+              <p class="veille__card-desc">Blog officiel de Cisco couvrant les dernières innovations en matière de réseaux, sécurité, cloud et collaboration. Idéal pour suivre l'évolution des équipements Cisco.</p>
+              <a href="https://blogs.cisco.com" target="_blank" rel="noopener" class="veille__card-link">Visiter Cisco Blogs</a>
+            </div>
+          </div>
+
+          <div class="veille__card" style="--card-color: #1a5276;">
+            <div class="veille__card-header">
+              <div class="veille__card-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2l-5.5 9h11L12 2zm0 3.84L14.6 10H9.4L12 5.84zM17.5 13c-2.49 0-4.5 2.01-4.5 4.5S15.01 22 17.5 22s4.5-2.01 4.5-4.5S19.99 13 17.5 13zm0 7c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5zM3 21.5h8v-8H3v8zm2-6h4v4H5v-4z"/></svg>
+              </div>
+              <div>
+                <div class="veille__card-title">Korben</div>
+                <div class="veille__card-tag">Linux, outils & astuces</div>
+              </div>
+            </div>
+            <div class="veille__card-body">
+              <p class="veille__card-desc">Blog tech francophone incontournable pour les geeks : logiciels libres, Linux, sécurité, outils pratiques et actualité du monde numérique avec un regard décalé.</p>
+              <a href="https://korben.info" target="_blank" rel="noopener" class="veille__card-link">Visiter Korben</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- ══════════════════════════════════════ -->
+
+    <section class="about" id="about">
+      <div class="row">
+        <h2>À propos</h2>
+        <div class="about__content">
+          <div class="about__text">
+            <p>Je suis actuellement en 2ème année de BTS SIO option SISR. J'ai acquis des compétences dans l'installation, la configuration et la sécurisation d'infrastructures réseau. Mon objectif aujourd'hui est d'acquérir un maximum de connaissance en réseau et système pour pouvoir plus tard travailler dans la cybersécurité.</p>
+            <a href="./documents/CV_jordan_vang.pdf" class="btn">Mon CV</a>
+          </div>
+          <div class="about__photo-container">
+            <img class="about__photo" src="./images/jvang.png" alt="Photo Jordan VANG" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="contact" id="contact">
+    <div class="row">
+      <h2>Me contacter</h2>
+      <div class="contact__info">
+        <p>Pour toute question, demande ou collaboration, vous pouvez m'écrire par mail. Je vous répondrai dès que possible.</p>
+        <a href="mailto:jordanvang17@gmail.com" class="btn">jordanvang17@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <footer role="contentinfo" class="footer">
+    <div class="row">
+      <ul class="footer__social-links">
+        <li><a href="#"><img src="./images/github.svg" alt="GitHub"></a></li>
+        <li><a href="#"><img src="./images/linkedin.svg" alt="LinkedIn"></a></li>
+      </ul>
+      <p>&copy; 2026 Jordan VANG - BTS SIO SISR</p>
+    </div>
+  </footer>
+  <a href="#top" class="back-to-top"><img src="./images/arrow-up.svg" alt="Haut de page" /></a>
+  <script src="./index.js"></script>
+</body>
+
+</html>
